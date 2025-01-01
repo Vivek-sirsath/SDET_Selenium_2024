@@ -40,8 +40,8 @@ public class BootstrapTable {
 		System.out.println("Number of records: " + rowList.size());
 		
 		
-		//div[@class='oxd-table-body']//div[1]//div[2]//div[contains(text(),'FMLName1')] // Incorrect
-		//div[@class='oxd-table-body']/child::div[3]/div/div[2] // 
+		//div[@class='oxd-table-body']//div[1]//div[2]//div[contains(text(),'FMLName1')] // Incorrect XPath
+		//div[@class='oxd-table-body']/child::div[3]/div/div[2] // Correct XPath
 		
 		
 		for(int r = 1; r<=rowList.size(); r++) {

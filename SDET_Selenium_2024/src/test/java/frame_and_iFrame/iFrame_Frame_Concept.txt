@@ -1,0 +1,40 @@
+Handling Frames:- 
+
+- Frames can be identified by 3 ways
+  i) By id
+  ii) By name
+  iii) By WebElement itself
+  
+ e.g.
+     driver.switchTo.frame(id);
+     driver.switchTo.frame(name);
+     driver.switchTo.frame(frame1); // frame1 variable pass as a web element.
+     
+     driver.switchTo.frame(Index); 
+     // Use only if single frame is present inside the page.
+     // If multiple frames inside the page, then don't use indexing concept.
+ ================================================================
+     
+ Rules to handle frames:-  
+1) Frames are nothing but the page embedded in a web page.
+2) We can not switch directly from one frame to another frame. 
+   First we need to switch back to the main page using-
+   (driver.switchTo().defaultContent()) 
+   and then switch the driver focus to another frame.
+   
+==================================================================
+
+Three Types of switching methods:-
+1) Browser windows -
+   driver.switchTo().window(windowID / windowHandle)
+   
+2)Alerts -
+   driver.switchTo().alert();
+   driver.switchTo().alert().accept();
+   driver.switchTo().alert().dismiss();
+
+3) Frames:- 
+   driver.switchTo.frame(id);
+   driver.switchTo.frame(name);
+   driver.switchTo.frame(frame1);   
+   driver.switchTo.frame(Index);  

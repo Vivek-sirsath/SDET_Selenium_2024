@@ -1,0 +1,44 @@
+There are three types of dropdowns - 
+1) Select Dropdown - having select tag
+2) Bootstrap Dropdown - Having div or other tags but not select tag
+3) Hidden Dropdown - Having div or other tags but not select tag
+
+===================================================================
+
+1) Select Dropdown:-
+   In select dropdown we can select only one option from dropdown menu.
+
+   getOptions() - return all the options from the dropdown as a WebElement.
+   Every option in a dropdown is a WebElement.
+
+   <select id="Country">
+   <option value="In">India<option>
+ 
+ # Built-In methods  
+   // sel.selectByVisibleText("India");
+   // sel.selectByValue("france"); // Case Sensitive
+   // sel.selectByIndex(2);
+   
+=================================================================
+ 
+2) Bootstrap Dropdown / Multiselect Dropdown:- 
+   In Bootstrap dropdown we can select multiple options from dropdown menu.
+   XPath is very important in handling this dropdown. We don't use Built-In methods.
+
+================================================================= 
+
+3) Hidden Dropdown:-
+   The dropdown options which are visible in the dropdown 
+   But, they are not visible in the HTML DOM, hence they are called hidden dropdown.
+   XPath is very important in handling this dropdown. We don't use Built-In methods.
+
+# Here we need to use 'Turn on debugger' feature of 'SelectorsHub'
+  Click on the 4th icon-'Turn on debugger' > Within 5 sec. click on the dropdown >
+  > All the hidden options will be appearing in DOM > Then we can inspect.
+  
+  
+
+
+
+
+

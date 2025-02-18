@@ -72,10 +72,11 @@ public class BootstrapDropdown {
 
 		String noOfOptionsOnLabelText = driver.findElement(By.xpath("//span[@class='multiselect-selected-text']")).getText();
 		String countText = (count + " selected");
+		String allOptionSelectedText = ("All selected " + "("+count+")");
 
 		// Validate the no. of options displayed in toggle button text.
 
-		if (noOfOptionsOnLabelText.equals(countText)) {
+		if (noOfOptionsOnLabelText.equals(countText) || noOfOptionsOnLabelText.equals(allOptionSelectedText) ) {
 			System.out.println("No. of selected options in toggle button text verified");
 		}
 	}

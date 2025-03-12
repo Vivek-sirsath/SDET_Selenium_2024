@@ -29,7 +29,7 @@ public class SelectAlternateCheckboxes {
 
 			// Loop through the checkboxes and select alternate ones
 			for (int i = 0; i < checkboxes.size(); i++) {
-				if (i % 2 == 0) { // Select even-indexed checkboxes (0, 2, 4, ...)
+				if (i % 2 == 0) { // Select even-indexed checkboxes (0, 2, 4, ... indices)
 					// To start with second check box - (i % 2 != 0) OR (i % 2 == 1)
 					WebElement checkbox = checkboxes.get(i);
 					if (!checkbox.isSelected()) {

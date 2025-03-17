@@ -1,0 +1,73 @@
+ChromeOptions (C)
+EdgeOptions (C)
+FirefoxOptions (C)
+
+By using these classes we can do settings in browser.
+
+1) Headless Testing
+-------------------
+        ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+		WebDriver driver = new ChromeDriver(options); // We've to pass the options here, else the browser will launch
+		
+Advantages: 
+1) We can do multiple tasks. (Since execution happens in background)
+2) Faster execution
+
+Disadvantages:
+1) User can not see actions on web page. Can't understand flow/functionality of test case.
+
+
+
+2) SSL Handling (Secured Socket Layer)
+--------------------------------------
+        ChromeOptions options = new ChromeOptions();
+		options.setAcceptInsecureCerts(true); // By default it is false
+
+		
+		
+3) Disable Message: "Chrome is being controlled by automated test software"	
+---------------------------------------------------------------------------
+        ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});	
+        WebDriver driver = new ChromeDriver(options);
+        
+        
+4) To run the test case in incognito mode.
+------------------------------------------
+        ChromeOptions options = new ChromeOptions();
+		options.addArguments("--incognito"); // setting for incognito mode 
+
+		WebDriver driver = new ChromeDriver(options);
+
+5) Enable Extensions In AutomatedBrowser
+----------------------------------------
+	    Step 1: Add CRX extractor/downloader to chrome browser (manually).
+	    Step 2: Add selectorsHub plugin to chrome browser (manually).
+	    Step 3: Capture CRX file for selectorsHub extension.
+	    Step 4: Pass CRX file path in automation script in chrome options.
+	
+# CRX file is needed here.
+# For every extension installed there is CRX file is available for every extension.
+# 'CRX Extractor' is an installer for extension for browser to extract CRX file of the extension.
+   We need to add this extension in browser.
+# Open chrome web store for an extension which we want in our automation > Right click on that extension > We'll see the option 
+  'Download CRX for this extension' > Save that CRX file to any desired location.
+# Pass the path of that CRX file in the code as a parameter.
+# Then we can see the extension in automated browser window.
+
+        ChromeOptions options = new ChromeOptions();
+		File path = new File("F:\\Automation Testing\\SDET 2024 Java + Selenium\\SelectorsHub-XPath-Helper-Chrome-Web-Store.crx");
+		options.addExtensions(path);
+		WebDriver driver = new ChromeDriver(options); 
+===============================================================
+
+We can use ad blocker extension also to block the ads
+
+        https://text-compare.com/
+
+this site shows lots of ads. We wish to block those ads.
+
+
+		
+

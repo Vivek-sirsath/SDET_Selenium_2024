@@ -37,7 +37,7 @@ public class StaticWebTable {
 		
 		JavascriptExecutor jse = (JavascriptExecutor) driver ;
 		
-		jse.executeScript("window.scrollBy(0,1700)");
+		jse.executeScript("window.scrollBy(0,1300)");
 		
 		System.out.println("");		
 

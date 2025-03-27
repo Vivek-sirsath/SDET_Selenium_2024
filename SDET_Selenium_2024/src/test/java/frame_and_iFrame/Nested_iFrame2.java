@@ -19,7 +19,7 @@ public class Nested_iFrame2 {
 
 		Thread.sleep(5000);
 
-//		Interacting with Frame3
+//		Interacting with Frame5
 		WebElement frame5 = driver.findElement(By.xpath("//frame[@src='frame_5.html']"));
 		driver.switchTo().frame(frame5);
 		driver.findElement(By.xpath("//input[@name='mytext5']")).sendKeys("Frame5 Text");

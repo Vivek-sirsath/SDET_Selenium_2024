@@ -1,0 +1,8 @@
+Data Driven Testing: 
+
+1) Understand the functionality (Writing Test Cases)
+2) Prepare test data, keep in excel file
+3) Develop automation script
+
+URL: https://www.moneycontrol.com/fixed-income/calculator/state-bank-of-india-sbi/fixed-deposit-calculator-SBI-BSB001.html
+

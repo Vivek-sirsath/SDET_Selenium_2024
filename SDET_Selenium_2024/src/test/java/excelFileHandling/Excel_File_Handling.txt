@@ -1,0 +1,24 @@
+Hierearchy of Excel File :- 
+Excel File contains ---> Workbook ---> Sheets ---> Rows ---> Cells
+
+# We can open or handle the Excel File in 2 modes -
+  Reading mode - FileInputStream (C)
+  Writing mode - FileOutputStream (C)
+  
+# Classes provided by Apache POI :-
+  XSSFWorkbook (C)  -----> Workbook
+  XSSFSheet (C)  --------> Sheet
+  XSSFRow (C)    --------> Row
+  XSSFCell (C)   --------> Cell
+  
+  ----------------------------------------------------------------------------------------------------------------------------
+  
+//      As per Excel, rowCount starts from '0'
+//		As per Excel, cellCount starts from '1'
+//		As per Java, rowCount starts from '0'
+//		As per Java, cellCount starts from '0'
+
+
+int totalRows = sheet1.getLastRowNum(); // 5
+int totalColumns = sheet1.getRow(1).getLastCellNum(); 
+int totalColumns = sheet1.getRow(0).getLastCellNum(); // Instead of '1' we can take any row number.

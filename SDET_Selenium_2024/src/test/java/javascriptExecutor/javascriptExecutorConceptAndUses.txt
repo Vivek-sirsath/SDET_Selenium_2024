@@ -1,0 +1,68 @@
+Interface to Interface ----> Extents
+Interface to Class     ----> Implements
+Class to Class         ----> Extends
+
+
+                                   SearchContext(I)
+                                         |
+                                     WebDriver(I)
+                                         |
+                  ----------------------------------------------------
+                  |                      |                           |
+     JavascriptExecutor(I)        RemoteWebDriver(C)          TakeScreenshot(I)
+             |                           |                           |
+    -------------------------------------------------------------------------------
+    |                   |                |                     |                  |
+IEdriver(C)    FirefoxDriver(C)    ChromiumDriver(C)     OperaDriver(C)    SafariDriver(C)
+                                         |
+                            ---------------------------
+                            |                         |
+                      ChromeDriver(C)            EdgeDriver(C)
+
+
+
+# JavascriptExecutor (Interface):-
+executeScript() - By this method we can execute Javascript statements.
+When action methods will not work, then we use javascriptExecutor()
+
+ElementInterceptedException - This exception comes when click() method fail to execute Javascript statements intrnally.
+To avoid the exception, the solution is,
+We'll directly execute the Javascript statements directly by using 'executeScript()' method.
+We'll have to pass the javascript code in the method. 
+e.g.
+     executeScript('javascript statement');
+
+Only Action methods will be performed using JavascriptExecutor(), like click(), sendKeys(), scrolling
+Not like getText(), clear()
+==============================================================================================================
+
+JavascriptExecutor jse = (JavascriptExecutor) driver; // TypeCasting
+
+1) Entering the text without sendkeys() method
+   jse.executeScript("arguments[0].setAttribute('value', 'John')", nameInputBox);
+   
+2) Clicking on the webElement without click() method.
+   jse.executeScript("arguments[0].click()", maleRadioBtn); 
+===========================================================
+
+3) Scrolling by pixel:- 
+   jse.executeScript("window.scrollBy(0,1100)", "");
+   
+   System.out.println(jse.executeScript("return window.pageYOffset;")); 
+   // return the pixel number of location of scroll
+===========================================================
+
+4) Scroll Until Visibility Of Element:-
+   jse.executeScript("arguments[0].scrollIntoView();", elementRef);
+===========================================================
+
+5) Scroll till the end of the page
+   jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+===========================================================
+
+6) Scroll back to the top of the page
+   jse.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
+   
+
+  
+   

@@ -29,7 +29,7 @@ Disadvantages:
 3) Disable Message: "Chrome is being controlled by automated test software"	
 ---------------------------------------------------------------------------
         ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});	
+		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});	// 2 parameters here
         WebDriver driver = new ChromeDriver(options);
         
         

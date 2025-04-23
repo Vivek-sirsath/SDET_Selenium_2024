@@ -1,23 +1,35 @@
-Interface to Interface ----> Extents
-Interface to Class     ----> Implements
-Class to Class         ----> Extends
 
 
-                                   SearchContext(I)
-                                         |
-                                     WebDriver(I)
-                                         |
-                  ----------------------------------------------------
-                  |                      |                           |
-     JavascriptExecutor(I)        RemoteWebDriver(C)          TakeScreenshot(I)
-             |                           |                           |
-    -------------------------------------------------------------------------------
-    |                   |                |                     |                  |
-IEdriver(C)    FirefoxDriver(C)    ChromiumDriver(C)     OperaDriver(C)    SafariDriver(C)
-                                         |
-                            ---------------------------
-                            |                         |
-                      ChromeDriver(C)            EdgeDriver(C)
+
+                                                                           SearchContext(I)
+                                                                                |
+                                           ------------------------------------------------------------------------                 
+                                           |                                                                      |
+                                      WebDriver(I)                                                           WebElement(I)
+                                           |                                                                      |
+                   ------------------------------------------------------                                 RemoteWebElement(C)
+                   |                       |                            |                                        
+        JavascriptExecutor(I)       RemoteWebDriver(C)          TakeScreenshot(I) 
+                   |                       |                            |
+     -------------------------------------------------------------------------------
+     |                   |                 |                     |                  |
+   IEdriver(C)    FirefoxDriver(C)    ChromiumDriver(C)     OperaDriver(C)    SafariDriver(C)
+                                           |
+                               ---------------------------
+                               |                         |
+                         ChromeDriver(C)            EdgeDriver(C)
+
+
+
+
+# Interface to Interface ----> Extents
+# Interface to Class     ----> Implements
+# Class to Class         ----> Extends
+
+
+# Interface extends Interface
+# Class implements Interface
+# Class extends Class
 
 
 

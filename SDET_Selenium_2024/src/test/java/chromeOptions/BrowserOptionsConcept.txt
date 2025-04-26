@@ -55,9 +55,12 @@ Disadvantages:
   'Download CRX for this extension' > Save that CRX file to any desired location.
 # Pass the path of that CRX file in the code as a parameter.
 # Then we can see the extension in automated browser window.
+# Manifest V3 is a new architecture for Chrome extensions.
+# Use updated extensions of Manifest Version 3. Because Chrome is upgraded from Manifest V2 to Manifest V3.
+  Hence some extensions may not work.
 
         ChromeOptions options = new ChromeOptions();
-		File path = new File("F:\\Automation Testing\\SDET 2024 Java + Selenium\\SelectorsHub-XPath-Helper-Chrome-Web-Store.crx");
+		File path = new File("F:\\Automation Testing\\CRX Files\\uBlock-Origin-LiteMV3.crx");
 		options.addExtensions(path);
 		WebDriver driver = new ChromeDriver(options); 
 ===============================================================

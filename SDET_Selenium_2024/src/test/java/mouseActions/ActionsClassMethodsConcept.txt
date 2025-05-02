@@ -1,0 +1,50 @@
+Actions Class Methods:-
+Actions class in Selenium is used to perform mouse actions.
+
+1) Mouse Hover
+2) Right Click
+3) Double Click
+4) Drag and Drop
+
+Q. What if only perform() method is used without build() method?
+   build() :- Create an action.
+   perform() :- Complete an action.
+   
+   perform() method internally build the action.
+   When we perform build().perform() - 2 times action is building
+   
+1) Mouse Hover:-
+   Actions act = new Actions(driver);
+   act.moveToElement(By.xpath("//a[normalize-space()='Mac (1)']).build().perform();
+   
+2) Right Click:-
+   act.contextClick(elementRef).perform();
+        
+3) Drag and Drop:-
+   act.dragAndDrop(source, target).build().perform();
+   
+4) Double Click:-
+   act.doubleClick(elementRef).perform();
+===================================================================================
+   # getText() vs getAttribute()
+   
+   EXAMPLE: <input id="xyz" >welcome</input>
+   
+   getText() --> Returns the inner text --> welcome
+   getAttribute("id") --> Returns the value of the attribute --> xyz
+   
+   EXAMPLE:  <input value="Welcome"></input>
+   getAttribute("value") --> Returns the value of the attribute value --> Welcome
+===================================================================================
+   # Actions vs Action
+   
+   Actions :- Class, will be used to perform mouse actions
+   Action :- Interface, will be used to store the created action
+
+===================================================================================
+
+5) Press Control+Click on register link
+   act.keyDown(Keys.CONTROL).click(regLink).keyUp(Keys.CONTROL).perform();
+
+
+     

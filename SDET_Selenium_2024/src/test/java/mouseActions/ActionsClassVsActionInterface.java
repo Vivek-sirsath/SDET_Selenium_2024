@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class ActionsClassVsActionInterface {
@@ -23,8 +22,10 @@ public class ActionsClassVsActionInterface {
 
 		Actions act = new Actions(driver);
 
-		Action myAction = act.contextClick(rightClickMeBtn).build(); // Creating action
-		myAction.perform(); // Completing the action
+	    act.contextClick(rightClickMeBtn).build().perform();
+	    // We can use Actions class object to perform the actions directly.
+	    // No need to store the action in Action interface.
+		
 		System.out.println("Right click button clicked...");
 
 	}

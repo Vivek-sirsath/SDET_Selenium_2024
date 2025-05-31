@@ -18,6 +18,11 @@ Excel File contains ---> Workbook ---> Sheets ---> Rows ---> Cells
 //		As per Java, rowCount starts from '0'
 //		As per Java, cellCount starts from '0'
 
+## Methods used while reading Excel File :-
+- To read the data from sheet : getSheet()
+- To read the data from row : getRow()
+- To read the data from cell : getCell()
+
 
 int totalRows = sheet1.getLastRowNum(); // 5
 int totalColumns = sheet1.getRow(1).getLastCellNum(); 

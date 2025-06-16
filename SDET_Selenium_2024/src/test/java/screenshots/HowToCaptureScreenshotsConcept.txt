@@ -1,0 +1,67 @@
+
+                                                                         SearchContext(I)
+                                                                                |
+                                           ------------------------------------------------------------------------                 
+                                           |                                                                      |
+                                      WebDriver(I)                                                           WebElement(I)
+                                           |                                                                      |
+                   ------------------------------------------------------                                 RemoteWebElement(C)
+                   |                       |                            |                                        
+        JavascriptExecutor(I)       RemoteWebDriver(C)          TakeScreenshot(I) 
+                   |                       |                            |
+     -------------------------------------------------------------------------------
+     |                   |                 |                     |                  |
+   IEdriver(C)    FirefoxDriver(C)    ChromiumDriver(C)     OperaDriver(C)    SafariDriver(C)
+                                           |
+                               ---------------------------
+                               |                         |
+                         ChromeDriver(C)            EdgeDriver(C)
+                         
+
+
+
+                         
+# Interface to Interface ----> Extents
+# Interface to Class     ----> Implements
+# Class to Class         ----> Extends                        
+
+
+# Interface extends Interface
+# Class implements Interface
+# Class extends Class
+
+
+1) Full page screenshot:-
+
+        TakesScreenshot ts = (TakesScreenshot) driver;
+       
+        // Here getScreenshotAs() method we're calling from TakesScreenshot Interface.
+        
+		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+		
+		File targetFile = new File(System.getProperty("user.dir")+"\\screenshots\\fullPage.png");
+		// "user.dir" should be written in small letters. "User.dir" will not work.
+		
+		sourceFile.renameTo(targetFile);
+
+2) Specific area screenshot:-
+
+       WebElement newsArea = driver.findElement(By.xpath("//div[@class='news-items']"));
+		
+		// Here getScreenshotAs() method we're calling from WebElement Interface.
+		// Selenium 4.0 onwards this method is implemented in WebElement interface also.]
+		
+		File sourceFile = newsArea.getScreenshotAs(OutputType.FILE); 
+		
+3) Specific web element screenshot:-		
+		
+		WebElement logo = driver.findElement(By.xpath("//a[@title='Time.is']"));
+		
+		// Here getScreenshotAs() method we're calling from WebElement Interface.
+		// Selenium 4.0 onwards this method is implemented in WebElement interface also.]
+		
+		File sourceFile = logo.getScreenshotAs(OutputType.FILE);
+		
+		
+		
+		

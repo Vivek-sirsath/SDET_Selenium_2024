@@ -21,7 +21,7 @@
 
 
                          
-# Interface to Interface ----> Extents
+# Interface to Interface ----> Extends
 # Interface to Class     ----> Implements
 # Class to Class         ----> Extends                        
 

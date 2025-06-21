@@ -23,7 +23,7 @@ public class HandlingSVGElements {
 		driver.findElement(By.xpath("//a[@class='oxd-main-menu-item active']//*[name()='svg']")).click();
 
 		// While handling SVG elements, name() function/attribute should be available in the XPath.
-		// In every SVG element's XPath this name() must be present, else we can't locate the SVG elements.
+		// In every SVG element's XPath, name() must be present, else we can't locate the SVG elements.
 
 	}
 

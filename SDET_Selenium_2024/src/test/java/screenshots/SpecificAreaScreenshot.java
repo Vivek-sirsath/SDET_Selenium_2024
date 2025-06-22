@@ -21,7 +21,8 @@ public class SpecificAreaScreenshot {
 		
 		WebElement newsArea = driver.findElement(By.xpath("//div[@class='news-items']"));
 		
-		File sourceFile = newsArea.getScreenshotAs(OutputType.FILE);
+		// Here getScreenshotAs() method we're calling from WebElement Interface
+		File sourceFile = newsArea.getScreenshotAs(OutputType.FILE); 
 		
 		File targetFile = new File(System.getProperty("user.dir")+"\\screenshots\\specificArea.png");
 		sourceFile.renameTo(targetFile); // Copies file from source to target folder.

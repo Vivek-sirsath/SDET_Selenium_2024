@@ -23,6 +23,7 @@ public class FullPageScreenshot {
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		
+		// Here getScreenshotAs() method we're calling from TakesScreenshot Interface
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 		
 		File targetFile = new File(System.getProperty("user.dir")+"\\screenshots\\fullPage.png");

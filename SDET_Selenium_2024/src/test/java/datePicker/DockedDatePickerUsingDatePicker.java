@@ -22,8 +22,7 @@ public class DockedDatePickerUsingDatePicker {
 				break;
 			}
 
-			// Click on right arrow icon button in calendar until matches future month and
-			// year
+//		    Click on right arrow icon button in calendar until matches future month and year
 			driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click(); // Right Button
 //			driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-w']")).click(); // Left Button
 		}
@@ -87,11 +86,14 @@ public class DockedDatePickerUsingDatePicker {
 		// Open DatePicker
 		driver.findElement(By.xpath("//input[@id='datepicker']")).click();
 
-		String year = "2024";
+		String year = "2026";
 		String month = "February";
 		String date = "12";
 
-		selectPastDate(driver, year, month, date);
+		// We can call only one method at a time
+		
+//		selectPastDate(driver, year, month, date);
+		selectFutureDate(driver, year, month, date);
 
 	}
 

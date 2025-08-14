@@ -20,7 +20,9 @@ public class WebElementScreenshot {
 		driver.get("https://time.is/IST");
 		
 		WebElement logo = driver.findElement(By.xpath("//a[@title='Time.is']"));
-		
+
+		// If you directly instantiate a specific driver class, like ChromeDriver, 
+		// You can access getScreenshotAs() without explicit typecasting because ChromeDriver itself implements TakesScreenshot
 		File sourceFile = logo.getScreenshotAs(OutputType.FILE);
 		
 		File targetFile = new File(System.getProperty("user.dir")+"\\screenshots\\logo.png");

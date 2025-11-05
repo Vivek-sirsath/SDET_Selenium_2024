@@ -16,8 +16,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	public static FileInputStream fi;
-	public static FileOutputStream fo;
+	public static FileInputStream fi;  //  For reading mode
+	public static FileOutputStream fo;  // For writting mode
 	public static XSSFWorkbook wb;
 	public static XSSFSheet ws;
 	public static XSSFRow row;

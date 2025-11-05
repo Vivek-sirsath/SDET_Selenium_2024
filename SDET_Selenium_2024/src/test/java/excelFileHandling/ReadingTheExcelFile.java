@@ -47,10 +47,10 @@ public class ReadingTheExcelFile {
 			for (int c = 0; c < totalColumns; c++) 
 			{
 				XSSFCell cell = currentRow.getCell(c);
-				System.out.print(cell.toString() + "\t"); // tab-space
+				System.out.print(cell.toString() + "\t"); // tab-space // This will print row data in single line
 			}
 			
-			System.out.println();
+			System.out.println(); // This will go to the next line.
 		}
 		
 		// Finally we've to close the workbook and file after using it.

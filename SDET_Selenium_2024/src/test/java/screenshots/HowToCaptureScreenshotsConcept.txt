@@ -21,7 +21,11 @@
 
 
                          
+<<<<<<< HEAD
 # Interface to Interface ----> Extends
+=======
+# Interface to Interface ----> Extents
+>>>>>>> 8c6d85c (Saving my local changes before pull)
 # Interface to Class     ----> Implements
 # Class to Class         ----> Extends                        
 

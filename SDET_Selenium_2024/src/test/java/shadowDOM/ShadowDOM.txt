@@ -1,0 +1,52 @@
+Shadow DOM: 
+
+DOM: Document Object Model
+- DOM will be created when the web page is loaded.
+
+SHADOW DOM:
+- A main DOM contains another DOM, which is called SHADOW DOM.
+- SHADOW DOM can have another SHADOW DOM.
+- XPath can not handle SHADOW DOM elements. Even other locating strategies won't work.
+- Only cssSelector can handle SHADOW DOM elements.
+
+Hierarchy:
+- Document > Shadow Host > Shadow Root > Inside the Shadow Root we can find the elements.
+- Shadow Root is a part of Shadow Host, Shadow Root contains the WebElements.
+- Shadow Host contains Shadow Root which further contains elements.
+- DOM can contain Nested-Shadow-DOM, and inside Nested-Shadow-DOM there are nested shadow elements
+
+
+  Document Tree:-
+             
+               DOCUMENT
+                  |
+        --------------------
+        |                  |
+   SHADOW HOST        SHADOW HOST
+        |
+   SHADOW HOST
+   
+  ___________________________________
+  
+  - Shadow Host contains Shadow Root
+  Shadow Tree:-
+
+
+              SHADOW ROOT
+                  |
+        --------------------
+        |                  |
+     Element            Element
+        |
+     Element
+  
+_____________________________________
+
+- Elements inside Shadow DOM can not be located by XPath, these are only located by CSSSelector. 
+
+e.g. 
+    SearchContext shadow0 = driver.findElement(By.cssSelector("#shadow-root")).getShadowRoot();
+    String element1 = shadow0.findElement(By.cssSelector("#shadow-element")).getText();  
+    System.out.println("1st shadow element text is:- " + element1);
+    
+    

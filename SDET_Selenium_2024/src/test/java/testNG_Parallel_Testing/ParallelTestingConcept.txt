@@ -1,0 +1,12 @@
+Parallel Testing :-
+
+1) Created test cases.
+2) Created XML file to run the test cases.
+3) Passed browser name parameter in XML file and received in setup() method.
+4) Create 3 different test tags containing different browser names.
+   Create it by Copy - Paste , just change the TestName and browser value.
+5) Execute the test cases on different browsers as 'TestNG Suite'. (Serial Execution)  
+6) Execute the test cases on different browsers as 'TestNG Suite'. (Parallel Execution)
+   This is done by specifying 'parallel' attribute in XML file.
+   e.g. parallel="tests"
+   By this, the test methods will run parallel.

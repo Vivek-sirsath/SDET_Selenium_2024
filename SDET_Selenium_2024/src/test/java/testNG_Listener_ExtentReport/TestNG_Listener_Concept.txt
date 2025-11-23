@@ -1,0 +1,77 @@
+TestNG Listener class (C) implements ITestListener Interface (I).
+
+1) Create test case.
+2) Create Listener class.
+3) Create XML file and include both test cases and Listener class.
+_________________________________________________________________________
+
+
+There are 2 ways to implement Listener class :-
+
+ 1st Way :-
+===========
+
+- By implementing ITestListener (I) interface -
+
+class myListenerClass implements ItestListener 
+{
+
+}
+
+
+ 2nd Way :-
+===========
+
+- By extending TestListenerAdapter Class -
+- TestListenerAdapter class is present in TestNG
+
+class myListenerclass extends TestLisnerAdapter
+{
+
+}
+
+_________________________________________________________________________
+
+
+# To see the methods implemented by ITestListener (I)
+- Press and Hold CNTRL + Click on ITestListener (I)
+- This will open the documentation.
+
+---------------------------------
+TestNG XML file for extent report :-
+---------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener
+			class-name="testNG_Listener_ExtentReport.ExtentReportManager" />
+	</listeners>
+	
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="testNG_Listener_ExtentReport.TestCasesClass" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+---------------------------------------------------------------------------------
+
+# Listener tag for Extent Report generation
+
+#   <listeners>
+		<listener
+			class-name="testNG_Listener_ExtentReport.ExtentReportManager" />
+	</listeners>
+	
+- <listener/> tag is important and to be mention in TestNG XML file.
+
+---------------------------------------------------------------------------------
+
+# While creating ExtentReportManager class, to implement the methods 
+  (onTestStart, onTestSuccess, onTestFailure, onTestSkipped, onStart) of ITestListener (I) interface,
+  Copy-Paste the methods that are required. 
+  Copy from the ITestListener.class (Press and Hold CNTRL + Click on ITestListener (I)).
+

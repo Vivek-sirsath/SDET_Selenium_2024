@@ -18,7 +18,7 @@ public class SimpleAlert {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
-// Simple / Normal alert with OK button only.
+//      Simple / Normal alert with OK button only.
 		driver.findElement(By.cssSelector("button[onclick='jsAlert()']")).click();
 		System.out.println("Clicked on simple alert button");
 		

@@ -17,6 +17,7 @@ public class FileUploadUsingSendkeys {
 		driver.get("https://davidwalsh.name/demo/multiple-file-upload.php/");
 
 		// Scenario 1 - Single file upload
+		// We can use sendKeys() only if 'type=file' with <input> tag is given in DOM
 		driver.findElement(By.xpath("//input[@id='filesToUpload']"))
 				.sendKeys("F:\\Automation Testing\\SDET 2024 Java + Selenium\\SDET_Selenium_2024_37_FileUpload_01.txt");
 
@@ -31,7 +32,7 @@ public class FileUploadUsingSendkeys {
 		String file2Path = "F:\\Automation Testing\\SDET 2024 Java + Selenium\\SDET_Selenium_2024_37_FileUpload_02.txt";
 		String file3Path = "F:\\Automation Testing\\SDET 2024 Java + Selenium\\SDET_Selenium_2024_37_FileUpload_03.txt";
 
-		driver.findElement(By.xpath("//input[@id='filesToUpload']")).sendKeys(file2Path + "\n" + file3Path);
+		driver.findElement(By.xpath("//input[@id='filesToUpload']")).sendKeys(file2Path + "\n" + file3Path);  // "\n" - new line
 
 		int noOfFilesUploaded = driver.findElements(By.xpath("//ul[@id='fileList']/li")).size();
 

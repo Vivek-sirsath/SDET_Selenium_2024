@@ -14,11 +14,15 @@ public class ReadingTheExcelFile {
 
 		// Checking the class path at runtime if any error persist
 //		System.out.println(System.getProperty("java.class.path")); // Optional 
+		
+		// Get user directory path
+		// System.out.println(System.getProperty("user.dir"));  // Optional
 
 		// Open the file in reading mode, Create an input stream and load the Excel file
 		// 'user.dir' must be in lower case.
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "\\testData\\FileInputStream.xlsx");
-//		FileInputStream file = new FileInputStream("C:\\Users\\Admin\\Desktop\\testData\\FIS_SDET2024.xlsx");
+//		OR
+//		FileInputStream file = new FileInputStream("C:\\Users\\Admin\\Desktop\\testData\\FIS_SDET2024.xlsx"); // Complete file path
 		
 		// XSSFWorkbook will extract the workbook from the file.
 		XSSFWorkbook workbook = new XSSFWorkbook(file); // IOException

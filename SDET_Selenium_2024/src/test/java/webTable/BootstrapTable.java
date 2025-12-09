@@ -1,5 +1,5 @@
 /*
- * Bootstap Table: It is a tale where tr / td tags are not available
+ * Bootstap Table: It is a table where tr / td tags are not available
  * Instead of them only div tags are there.
  * Also, it dosent have pegination.
  * The rows in this kind of table may be reducing or increasing. 

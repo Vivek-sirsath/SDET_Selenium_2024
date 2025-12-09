@@ -29,14 +29,13 @@ public class StaticWebTable {
 		// If Web page has multiple tables
 		int cols = driver.findElements(By.xpath("//table[@name='BookTable']//tbody//th")).size();
 		// If web page has single web table
-		// int cols2 = driver.findElements(By.tagName("tr")).size();
+		// int cols2 = driver.findElements(By.tagName("th")).size();
 
 		System.out.println("Number of columns: " + cols); // 4 // try cols2
 		
 		Thread.sleep(5000);
 		
-		JavascriptExecutor jse = (JavascriptExecutor) driver ;
-		
+		JavascriptExecutor jse = (JavascriptExecutor) driver ;		
 		jse.executeScript("window.scrollBy(0,1300)");
 		
 		System.out.println("");		
@@ -48,6 +47,7 @@ public class StaticWebTable {
 		System.out.println("");	
 
 //		4) Read data from all the rows and columns
+		
 		// We can't pass variables directly into XPath, we can do this using small syntax
 		// We can't pass String values in XPath, Only index numbers we can pass
 		// We can pass dynamically at the index, Syntax: ["+variable+"]
@@ -84,7 +84,7 @@ public class StaticWebTable {
 		int total = 0;
 		for(int r = 2; r <= rows; r++) {
 			String price = driver.findElement(By.xpath("//table[@name='BookTable']//tbody//tr["+r+"]//td[4]")).getText();
-			total = total + Integer.parseInt(price);
+			total = total + Integer.parseInt(price); // getText() returns String, so need to convert to int
 		}
 		System.out.println(total);
 		

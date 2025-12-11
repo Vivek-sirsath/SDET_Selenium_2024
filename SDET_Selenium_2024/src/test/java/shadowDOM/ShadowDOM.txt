@@ -12,7 +12,7 @@ SHADOW DOM:
 Hierarchy:
 - Document > Shadow Host > Shadow Root > Inside the Shadow Root we can find the elements.
 - Shadow Root is a part of Shadow Host, Shadow Root contains the WebElements.
-- Shadow Host contains Shadow Root which further contains elements.
+- Shadow Host contains Shadow Root and Shadow Root contains elements.
 - DOM can contain Nested-Shadow-DOM, and inside Nested-Shadow-DOM there are nested shadow elements
 
 
@@ -24,7 +24,7 @@ Hierarchy:
         |                  |
    SHADOW HOST        SHADOW HOST
         |
-   SHADOW HOST
+   SHADOW ROOT
    
   ___________________________________
   
@@ -42,9 +42,12 @@ Hierarchy:
   
 _____________________________________
 
-- Elements inside Shadow DOM can not be located by XPath, these are only located by CSSSelector. 
+- Elements inside Shadow DOM can not be located by XPath, those can only be located by CSSSelector. 
 
 e.g. 
+
+	--> https://dev.automationtesting.in/shadow-dom
+	
     SearchContext shadow0 = driver.findElement(By.cssSelector("#shadow-root")).getShadowRoot();
     String element1 = shadow0.findElement(By.cssSelector("#shadow-element")).getText();  
     System.out.println("1st shadow element text is:- " + element1);

@@ -41,7 +41,11 @@ public class UnderstandingShadowDOM1 {
 		SearchContext shadow2 = shadow1.findElement(By.cssSelector("#nested-shadow-dom")).getShadowRoot();
 		Thread.sleep(2000);
 		String element3 = shadow2.findElement(By.cssSelector("#multi-nested-shadow-element")).getText();
-		System.out.println("3rd shadow element text is:- " + element3);		
+		System.out.println("3rd shadow element text is:- " + element3);
+		
+		if (driver != null) {
+            driver.quit();
+        }
 		
 	}
 

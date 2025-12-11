@@ -18,7 +18,11 @@ public class UnderstandingShadowDOM2 {
 		driver.get("https://books-pwakit.appspot.com/");
 		
 		SearchContext shadow = driver.findElement(By.cssSelector("book-app[apptitle='BOOKS']")).getShadowRoot();
-		shadow.findElement(By.cssSelector("#input")).sendKeys("Ishita Shirsath");
+		shadow.findElement(By.cssSelector("#input")).sendKeys("Jurassic Park");
+		
+		if (driver != null) {
+            driver.quit();
+        }
 
 	}
 

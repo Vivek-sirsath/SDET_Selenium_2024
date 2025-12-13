@@ -42,39 +42,60 @@ To avoid the exception, the solution is,
 We'll directly execute the Javascript statements directly by using 'executeScript()' method.
 We'll have to pass the javascript code in the method. 
 e.g.
-     executeScript('javascript statement');
+     executeScript('javascript code');
 
 Only Action methods will be performed using JavascriptExecutor(), like click(), sendKeys(), scrolling
 Not like getText(), clear()
-==============================================================================================================
+==============================================================================================
 
 JavascriptExecutor jse = (JavascriptExecutor) driver; // TypeCasting
 
-1) Entering the text without sendkeys() method
+1) Entering the text without sendkeys() method :-
    jse.executeScript("arguments[0].setAttribute('value', 'John')", nameInputBox);
    
-2) Clicking on the webElement without click() method.
+2) Clicking on the webElement without click() method. :-
    jse.executeScript("arguments[0].click()", maleRadioBtn); 
-===========================================================
+==============================================================================================
 
-3) Scrolling by pixel:- 
+3) Scrolling by pixel :- 
    jse.executeScript("window.scrollBy(0,1100)", "");
    
    System.out.println(jse.executeScript("return window.pageYOffset;")); 
    // return the pixel number of location of scroll
-===========================================================
+==============================================================================================
 
-4) Scroll Until Visibility Of Element:-
+4) Scroll Until Visibility Of Element :-
    jse.executeScript("arguments[0].scrollIntoView();", elementRef);
-===========================================================
+==============================================================================================
 
-5) Scroll till the end of the page
+5) Scroll till the end of the page :-
    jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-===========================================================
+==============================================================================================
 
-6) Scroll back to the top of the page
+6) Scroll back to the top of the page :-
    jse.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
    
+==============================================================================================
 
-  
+7) To handle 'Disabled' elements, and to enable them :-
+   WebElement fNameBox = driver.findElement(By.xpath("//input[@placeholder='First Enter name']"));
+   jse.executeScript("arguments[0].removeAttribute('disabled');", fNameBox);
+
+==============================================================================================
+8) To handle 'Hidden' elements :- 
+
+   WebElement hiddenText = driver.findElement(By.xpath("//div[contains(@id,'myDIV')]"));
+   JavascriptExecutor js = (JavascriptExecutor) driver;
+   
+   // Make element visible using JavaScript
+   js.executeScript("arguments[0].style.display='block';", hiddenText);
+   js.executeScript("arguments[0].style.visibility='visible';", hiddenText);
+   
+   System.out.println("Hidden text:- " + js.executeScript("return arguments[0].textContent;", hiddenParagraph));
+   
+==============================================================================================
+
+
+
+
    

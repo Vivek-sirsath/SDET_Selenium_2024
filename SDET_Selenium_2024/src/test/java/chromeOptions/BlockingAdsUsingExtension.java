@@ -14,11 +14,11 @@ public class BlockingAdsUsingExtension {
 
 		 WebDriverManager.chromedriver().setup();
 
-	        ChromeOptions options = new ChromeOptions();
-	        options.addExtensions(new File("F:\\Automation Testing\\CRX Files\\uBlock-Origin-LiteMV3.crx"));
+	        ChromeOptions setting = new ChromeOptions();
+	        setting.addExtensions(new File("F:\\Automation Testing\\CRX Files\\uBlock-Origin-LiteMV3.crx"));
 	        // Manifest V3 is a new architecture for Chrome extensions.
 	       
-	        WebDriver driver = new ChromeDriver(options);
+	        WebDriver driver = new ChromeDriver(setting);
 	        driver.manage().window().maximize();
 
 	        Thread.sleep(3000); // wait for extensions to load completely

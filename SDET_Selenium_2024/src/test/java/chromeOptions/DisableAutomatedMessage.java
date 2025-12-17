@@ -9,10 +9,10 @@ public class DisableAutomatedMessage {
 
 	public static void main(String[] args) {
 		
-		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+		ChromeOptions setting = new ChromeOptions();
+		setting.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
 		
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(setting);
 		// We've to pass the options here, else the browser will launch
 
 		driver.manage().window().maximize();

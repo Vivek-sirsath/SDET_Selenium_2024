@@ -12,13 +12,13 @@ public class EnableExtensionsInAutomatedBrowser {
 		
 		String crxFilePath = "F:\\Automation Testing\\SDET 2024 Java + Selenium\\CRX files for Extensions\\SelectorsHub-XPath-Helper-Chrome-Web-Store.crx";
 		
-		ChromeOptions options = new ChromeOptions();
+		ChromeOptions setting = new ChromeOptions();
 		
 		File path = new File(crxFilePath);
 		
-		options.addExtensions(path);
+		setting.addExtensions(path);
 		
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(setting);
 		
 		driver.manage().window().maximize();
 		

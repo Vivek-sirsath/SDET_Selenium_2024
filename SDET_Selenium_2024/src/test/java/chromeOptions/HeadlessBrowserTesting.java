@@ -10,10 +10,10 @@ public class HeadlessBrowserTesting {
 
 	public static void main(String[] args) {
 		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new"); // setting for headless mode of execution
+		ChromeOptions setting = new ChromeOptions();
+		setting.addArguments("--headless=new"); // setting for headless mode of execution
 		
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(setting);
 		// We've to pass the options here, else the browser will launch
 
 		driver.manage().window().maximize();

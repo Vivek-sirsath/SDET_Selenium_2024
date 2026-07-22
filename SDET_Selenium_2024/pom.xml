@@ -9,13 +9,13 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.28.1</version>
+			<version>4.39.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.6.3</version>
+			<version>6.3.3</version>
 		</dependency>
 
 		<dependency>
@@ -57,7 +57,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
+			<version>7.11.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -65,6 +65,17 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.23.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.23.1</version>
 		</dependency>
 
 	</dependencies>
